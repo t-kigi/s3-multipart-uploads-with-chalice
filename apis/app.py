@@ -69,7 +69,7 @@ def _json(body: dict, status: int = 200) -> Response:
 
 @app.route('/api/multipart_upload/start/{ext}',
            methods=['PUT'])
-def start_multipart_upload_video(ext: Optional[str] = None):
+def start_multipart_upload(ext: Optional[str] = None):
     """ 動画のマルチアップロードの開始処理 """
     params = app.current_request.json_body or {}
     total_part = params.get('TotalPart', 0)
@@ -88,7 +88,7 @@ def start_multipart_upload_video(ext: Optional[str] = None):
 
 @app.route('/api/multipart_upload/complete',
            methods=['PUT'])
-def complete_multipart_upload_video():
+def complete_multipart_upload():
     """ マルチアップロードの完了通知 """
     params = app.current_request.json_body or {}
     res = s3.complete_multipart_upload(
