@@ -73,8 +73,6 @@ class S3MultiPartUploader:
         return {
             'UploadId': res['UploadId'],
             'UploadKey': key,
-            'UploadPath': f'/{key}',
-            'Code': filename.replace('/', '-'),
             'ContentType': content_type,
             'Parts': parts,
         }
