@@ -3,5 +3,7 @@ AWSResources:
   S3:
     BucketName: s3-multipart-uploads-with-chalice-test
     AllowOrigins:
+      # local development
       - http://localhost:8000
+      # AWS deployed 
       - https://s3-multipart-uploads.t-kigi.net

@@ -31,6 +31,8 @@ Fix `aws-cdk/config.yaml` as following.
 
 - Fix StageName and S3 BucketName
   - `${Stagename}.${BucketName}` bucket will be created by aws-cdk
+  - Bucket named `dev.s3-multipart-uploads-with-chalice-test` has been created already
+    - Bucket name must be unique within AWS so you have to change BucketName config
 - Add AllowOrigins
   - Write protocol and domain name to each line
 
