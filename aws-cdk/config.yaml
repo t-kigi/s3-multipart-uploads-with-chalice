@@ -1,0 +1,7 @@
+AWSResources:
+  StageName: dev
+  S3:
+    BucketName: s3-multipart-uploads-with-chalice-test
+    AllowOrigins:
+      - http://localhost:8000
+      - https://s3-multipart-uploads.t-kigi.net

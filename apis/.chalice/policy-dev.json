@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+          "s3:*"
+      ],
+      "Resource": [
+          "arn:aws:s3:::dev.s3-multipart-uploads-with-chalice-test",
+          "arn:aws:s3:::dev.s3-multipart-uploads-with-chalice-test/*"
+      ],
+      "Sid": "S3Access"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+        ],
+        "Resource": "arn:aws:logs:*:*:*",
+        "Sid": "CloudWatchLogsAccess"
+    }
+  ]
+}
